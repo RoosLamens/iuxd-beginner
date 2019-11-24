@@ -19,7 +19,17 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <style>
+      .zoom {
+        transition: transform 0.2s;
+      }
 
+      .zoom:hover {
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.5);
+      }
+    </style>
     <title>Grids - Charlie Souisa & Roos Lamens</title>
   </head>
   <body>
@@ -47,7 +57,7 @@
       class="container d-flex justify-content-center align-items-center"
       style=" margin-top: 48px; min-height: 600px"
     >
-      <h1 style="font-size: 114px">
+      <h1 style="font-size: 92px" class="zoom">
         Herzlich Willkommen
       </h1>
     </div>
