@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -20,6 +20,9 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <style>
+      .container {
+        padding: 0 0;
+      }
       .zoom {
         transition: transform 0.2s;
       }
@@ -33,43 +36,44 @@
       #home {
         padding-top: 50px;
         height: 100vh;
+        background-color: white;
       }
 
       #one {
         padding-top: 50px;
         height: 100vh;
-        color: #fff;
-        background-color: #1e88e5;
+        color: black;
+        background-color: #e5e4cc;
       }
       #two {
         padding-top: 50px;
         height: 100vh;
-        color: #fff;
-        background-color: #673ab7;
+        color: black;
+        background-color: #bac7a7;
       }
       #three {
         padding-top: 50px;
         height: 100vh;
         color: #fff;
-        background-color: #ff9800;
+        background-color: #889e81;
       }
       #four {
         padding-top: 50px;
         height: 100vh;
         color: #fff;
-        background-color: #00bcd4;
+        background-color: #698474;
       }
 
       #five {
         padding-top: 50px;
         height: 100vh;
         color: #fff;
-        background-color: red;
+        background-color: #aec9a5;
       }
     </style>
     <title>Grids - Charlie Souisa & Roos Lamens</title>
   </head>
-  <body>
+  <body style="overflow-y:hidden;">
     <!-- Begin Header-->
     <div class="container position-fixed fixed-top">
       <div class="row">
@@ -98,9 +102,9 @@
           >
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#home">Home</a>
+            <div role="separator" class="dropdown-divider"></div>
             <a class="dropdown-item" href="#one">Introductie</a>
             <a class="dropdown-item" href="#two">Wat?</a>
-            <!-- <div role="separator" class="dropdown-divider"></div> -->
             <a class="dropdown-item" href="#three">Waarom?</a>
             <a class="dropdown-item" href="#four">Hoe?</a>
             <a class="dropdown-item" href="#five">Wie?</a>
@@ -111,7 +115,7 @@
     <!--Einde Header-->
 
     <!--Begin Welkomscherm-->
-    <div id="home">
+    <div class="container" id="home">
       <div
         class="container d-flex justify-content-center align-items-center"
         style=" margin-top: 48px; min-height: 600px"
@@ -132,58 +136,81 @@
       data-offset="0"
     >
       <div id="one">
-        <div class="col">
-          <h1>Introductie</h1>
-        </div>
-        <div class="col">
-          <p class="text-justify">
-            Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus
-            sit amet fermentum. Donec sed odio operae, eu vulputate felis
-            rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc
-            posthac, sitientis piros Afros. Petierunt uti sibi concilium totius
-            Galliae in diem certam indicere. Cras mattis iudicium purus sit amet
-            fermentum.
-          </p>
-        </div>
+        <h1 style="display: flex; justify-content: center;">
+          Introductie
+        </h1>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h4>Grids</h4>
+              <p>
+                Als je meer te weten wilt komen over 'Grids' ben je op deze
+                pagina aan het juiste adres. Op deze pagina worden de wat,
+                waarom, hoe en wie besproken met betrekking tot grids en het
+                gebruik van grids. Ook hebben we een aantal voorbeelden van
+                grids uit de geschiedenis op een rijtje gezet.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img
+                src="images/example.png"
+                class="img-fluid"
+                alt="Responsive image"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="images/example.png"
+                class="img-fluid"
+                alt="Responsive image"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="images/example.png"
+                class="img-fluid"
+                alt="Responsive image"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <h4>Roos Lamens</h4>
+              <p>
+                Ik ben Roos Lamens, 24 jaren jong en ik woon in Delft. Ik
+                studeer dit jaar af aan de Hogeschool Rotterdam als 'Software
+                Engineer'. Tijdens de minor UI/UX design heb ik mogen kiezen
+                voor een onderwerp waar ik me verder in zou willen verdiepen. Ik
+                heb voor 'Grids' gekozen, omdat ik hier eigenlijk helemaal nog
+                niets vanaf wist.
+              </p>
+            </div>
+            <div class="col-sm">
+              <h4>Charlie Souisa</h4>
 
-        <!--Begin Images-->
-        <div class="row " style="margin-top:15px">
-          <div class="col">
-            <img
-              src="images/example1.png"
-              class="img-fluid"
-              alt="Responsive image"
-              style="height: 250px;"
-            />
-          </div>
-          <div class="col">
-            <img
-              src="images/example2.png"
-              class="img-fluid"
-              alt="Responsive image"
-              style="height: 250px;"
-            />
-          </div>
-          <div class="col">
-            <img
-              src="images/example3.png"
-              class="img-fluid"
-              alt="Responsive image"
-              style="height: 250px;"
-            />
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+              </p>
+
+              <!-- <img
+                src="images/example1.png"
+                class="img-fluid"
+                alt="Responsive image"
+                style="height: 250px;"
+              /> -->
+            </div>
           </div>
         </div>
-        <!--Einde Images-->
       </div>
       <!--Einde Introductie-->
 
       <!-- Begin 'Wat' -->
       <div id="two">
-        <!-- <div
-      class="row border-bottom border-dark"
-      style="margin-top:20px"
-    ></div> -->
-
         <div class="row" style="margin-top:15px">
           <div class="col">
             <h1>Wat</h1>
