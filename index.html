@@ -43,32 +43,38 @@
         padding-top: 50px;
         height: 100vh;
         color: black;
-        background-color: #e5e4cc;
+        background-color: #f5f5f5;
+      }
+      #geschiedenis {
+        padding-top: 50px;
+        height: 100vh;
+        color: black;
+        background-color: white;
       }
       #two {
         padding-top: 50px;
         height: 100vh;
         color: black;
-        background-color: #bac7a7;
+        background-color: #f5f5f5;
       }
       #three {
         padding-top: 50px;
         height: 100vh;
-        color: #fff;
-        background-color: #889e81;
+        color: black;
+        background-color: white;
       }
       #four {
         padding-top: 50px;
         height: 100vh;
-        color: #fff;
-        background-color: #698474;
+        color: black;
+        background-color: #f5f5f5;
       }
 
       #five {
         padding-top: 50px;
         height: 100vh;
-        color: #fff;
-        background-color: #aec9a5;
+        color: black;
+        background-color: white;
       }
     </style>
     <title>Grids - Charlie Souisa & Roos Lamens</title>
@@ -91,19 +97,32 @@
         </div>
         <div class="col-2 nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link "
             data-toggle="dropdown"
             href="#"
             role="button"
             aria-haspopup="true"
             aria-expanded="false"
-            style="color:black"
-            >Menu</a
+            style="display: flex;
+            align-items: flex-end;
+            flex-direction: column-reverse;"
           >
+            <div
+              style="width: 35px; height: 3px; background-color: black; margin: 2px 0;"
+            ></div>
+            <div
+              style="width: 35px; height: 3px; background-color: black; margin: 2px 0;"
+            ></div>
+            <div
+              style="width: 35px; height: 3px; background-color: black; margin: 2px 0;"
+            ></div
+          ></a>
+
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#home">Home</a>
             <div role="separator" class="dropdown-divider"></div>
             <a class="dropdown-item" href="#one">Introductie</a>
+            <a class="dropdown-item" href="#geschiedenis">Geschiedenis</a>
             <a class="dropdown-item" href="#two">Wat?</a>
             <a class="dropdown-item" href="#three">Waarom?</a>
             <a class="dropdown-item" href="#four">Hoe?</a>
@@ -135,269 +154,241 @@
       data-target="#navbar-example2"
       data-offset="0"
     >
-      <div id="one">
-        <h1 style="display: flex; justify-content: center;">
-          Introductie
-        </h1>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <h4>Grids</h4>
-              <p>
-                Als je meer te weten wilt komen over 'Grids' ben je op deze
-                pagina aan het juiste adres. Op deze pagina worden de wat,
-                waarom, hoe en wie besproken met betrekking tot grids en het
-                gebruik van grids. Ook hebben we een aantal voorbeelden van
-                grids uit de geschiedenis op een rijtje gezet.
-              </p>
-            </div>
+      <div
+        id="one"
+        style="display: flex;
+      flex-direction: column;
+      justify-content: center;"
+      >
+        <div class="row" style="margin-bottom: 10vh; margin-right: 10px;">
+          <div class="col-sm"></div>
+          <div class="col-sm"><h1>INTRODUCTIE</h1></div>
+          <div class="col-6">
+            <p style="text-align: justify;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting,
+            </p>
           </div>
-          <div class="row">
-            <div class="col">
-              <img
-                src="images/example.png"
-                class="img-fluid"
-                alt="Responsive image"
-              />
-            </div>
-            <div class="col">
-              <img
-                src="images/example.png"
-                class="img-fluid"
-                alt="Responsive image"
-              />
-            </div>
-            <div class="col">
-              <img
-                src="images/example.png"
-                class="img-fluid"
-                alt="Responsive image"
-              />
-            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm" style="margin-left:30px" ;>
+            <img
+              src="images/example.png"
+              alt="Trulli"
+              width="500"
+              height="333"
+            />
           </div>
-          <div class="row">
-            <div class="col-sm">
-              <h4>Roos Lamens</h4>
-              <p>
-                Ik ben Roos Lamens, 24 jaren jong en ik woon in Delft. Ik
-                studeer dit jaar af aan de Hogeschool Rotterdam als 'Software
-                Engineer'. Tijdens de minor UI/UX design heb ik mogen kiezen
-                voor een onderwerp waar ik me verder in zou willen verdiepen. Ik
-                heb voor 'Grids' gekozen, omdat ik hier eigenlijk helemaal nog
-                niets vanaf wist.
-              </p>
-            </div>
-            <div class="col-sm">
-              <h4>Charlie Souisa</h4>
-
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-              </p>
-
-              <!-- <img
-                src="images/example1.png"
-                class="img-fluid"
-                alt="Responsive image"
-                style="height: 250px;"
-              /> -->
-            </div>
+          <div
+            class="col-sm"
+            style="display: flex;
+          flex-direction: column;
+          align-items: center;"
+          >
+            <h1 style="margin-left: -177px;">
+              header
+            </h1>
+            <p style="max-width: 300px; text-align: justify;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+            </p>
           </div>
         </div>
       </div>
+
       <!--Einde Introductie-->
 
-      <!-- Begin 'Wat' -->
-      <div id="two">
-        <div class="row" style="margin-top:15px">
-          <div class="col">
-            <h1>Wat</h1>
+      <!-- Begin 'Geschiedenis' -->
+      <div
+        id="geschiedenis"
+        style="display: flex;
+      flex-direction: column;
+      justify-content: center;"
+      >
+        <div
+          class="row"
+          style="margin-bottom: 5vh; margin-left: 10px; margin-right: 10px;"
+        >
+          <div class="col-sm">
+            <h1>GESCHIEDENIS</h1>
+            <p style="max-width: 270px; text-align: justify;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into Lorem
+              Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+            </p>
           </div>
-          <div class="col" style="margin-top: 20px">
-            Wanneer is een product ‘goed’ en wanneer niet?
-          </div>
-          <div class="col" style="margin-top: 20px">
-            <lu style="list-style-type: none"
-              ><li>
-                Als het ontwerp is gebaseerd op de content van het product
-              </li>
-              <li>
-                Kolommen moeten uit meerdere units bestaan
-              </li>
-
-              <li>Het grid moet uit een even aantal kolommen bestaan</li></lu
-            >
+          <div class="col-sm">
+            <img
+              src="images/geschiedenis.jpg"
+              alt="Trulli"
+              style="width: 60vh;"
+            />
           </div>
         </div>
-        <div class="row" style="margin-top:15px">
-          <div class="col">
-            <h1></h1>
+      </div>
+      <!-- Einde 'Geschiedenis'-->
+
+      <!-- Begin 'Wat' -->
+      <div
+        id="two"
+        style="display: flex;
+      flex-direction: column;
+      justify-content: center;"
+      >
+        <div class="row" style="margin-bottom: 5vh; margin-right: 10px;">
+          <div class="col-sm"></div>
+          <div class="col-sm"><h1>WAT</h1></div>
+          <div class="col-8">
+            <p style="text-align: justify;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but
+              also the leap into electronic typesetting,
+            </p>
           </div>
-          <div class="col" style="margin-top: 20px">
-            Wat zijn de belangrijkste online resources als je met deze tools,
-            methodes of modellen aan de slag gaat?
-          </div>
-          <div class="col" style="margin-top: 20px">
-            <lu style="list-style-type: none"
-              ><li>
-                https://webflow.com/blog/history-of-grids
-              </li>
-              <li>
-                https://trydesignlab.com/blog/grids-ui-ux-graphic-design-quickhistory-
-                5-amazing-tips/#1
-              </li>
-              <li>
-                https://99designs.nl/blog/tips/history-of-the-grid-part-1/
-              </li>
-              <li>
-                https://vanseodesign.com/web-design/why-grids/
-              </li></lu
-            >
+        </div>
+
+        <div class="row">
+          <div class="col-sm" style="display: flex; justify-content: center;">
+            <img
+              src="images/Sony-15col-grid.jpg"
+              alt="Trulli"
+              style="width: inherit; height: 370px;"
+            />
           </div>
         </div>
       </div>
       <!-- Einde 'Wat'-->
 
       <!--Begin 'Waarom'-->
-      <div id="three">
-        <div class="row" style="margin-top:150px">
-          <div class="col">
-            <h1>Waarom</h1>
+      <div
+        id="three"
+        style="display: flex;
+      flex-direction: column;
+      justify-content: center;"
+      >
+        <div
+          class="row"
+          style="margin-bottom: 5vh; margin-left: 10px; margin-right: 10px;"
+        >
+          <div class="col-sm">
+            <img
+              src="images/1920_grids_2x.png"
+              alt="Trulli"
+              style="width: 60vh;"
+            />
           </div>
-          <div class="col" style="margin-top: 20px">
-            Waarom speelt dit onderwerp een rol in het ontwerpproces?
-          </div>
-          <div class="col" style="margin-top: 20px">
-            <lu style="list-style-type: none"
-              ><li>
-                Consistentie/Orde & duidelijkheid (gebruiker)
-              </li>
-              <li>
-                Efficiëntie/Orde & duidelijkheid (intern)
-              </li></lu
-            >
-          </div>
-        </div>
-        <div class="row " style="margin-top:15px">
-          <div class="col">
-            <h1></h1>
-          </div>
-          <div class="col" style="margin-top: 20px">
-            Welke aspecten van deze tools, methodes, benaderingen of modellen
-            zijn het belangrijkst?
-          </div>
-          <div class="col" style="margin-top: 20px">
-            <lu style="list-style-type: none"
-              ><li>
-                Units / Columns / Regions / Fields / Elements
-              </li>
-              <li>
-                Baseline grid / Gutters / Margins and padding
-              </li></lu
-            >
-          </div>
-        </div>
-
-        <div class="row" style="margin-top:15px; ">
-          <div class="col">
-            <h1></h1>
-          </div>
-          <div class="col" style="margin-top: 20px">
-            In welke fase van het ontwerpproces spelen deze tools, methodes,
-            benaderingen of modellen een belangrijke rol?
-          </div>
-          <div class="col" style="margin-top: 20px">
-            <lu style="list-style-type: none"
-              ><li>
-                In het begin van de ontwerpfase
-              </li>
-            </lu>
+          <div
+            class="col-sm"
+            style="display: flex;
+          flex-direction: column;
+          align-items: center;"
+          >
+            <h1 style="margin-left: -94px;">WAAROM</h1>
+            <p style="max-width: 270px; text-align: justify;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into Lorem
+              Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+            </p>
           </div>
         </div>
       </div>
       <!--Eind 'Waarom'-->
 
       <!--Begin 'Hoe'-->
-      <div id="four">
-        <div class="row" style="margin-top:15px">
-          <div class="col">
-            <h1>Hoe</h1>
+      <div
+        id="four"
+        style="display: flex;
+    flex-direction: column;
+    justify-content: center;"
+      >
+        <div class="row" style=" margin-left: 10px; margin-right: 10px;">
+          <div
+            class="col-sm"
+            style="display: flex;
+        flex-direction: column;
+        align-items: center;"
+          >
+            <h1 style="margin-left: -94px;">HOE</h1>
+            <p style="max-width: 270px; text-align: justify;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into Lorem
+              Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+            </p>
           </div>
-          <div class="col" style="margin-top: 20px">
-            Hoe maak je het product wat hoort bij deze tools, methodes of
-            modellen?
-          </div>
-          <div class="col" style="margin-top: 20px">
-            Een ontwerpprogamma voor digitale producten/uitingen (Sketch, Adobe
-            xd, Figma)
-          </div>
-        </div>
-        <div class="row" style="margin-top:15px">
-          <div class="col">
-            <h1></h1>
-          </div>
-          <div class="col" style="margin-top: 20px">
-            Welke handelingen moet je verrichten om tot het product te komen?
-          </div>
-          <div class="col " style="margin-top: 20px">
-            <lu style="list-style-type: none"
-              ><li>
-                Bepaal de hoeveelheid units in je document
-              </li>
-              <li>
-                Stel je baselinegrid in
-              </li>
-              <li>
-                Bepaal de hoeveelheid fields
-              </li></lu
-            >
+          <div class="col-sm">
+            <img src="images/hoe.png" alt="Trulli" style="width: 60vh;" />
           </div>
         </div>
       </div>
       <!-- Einde 'Hoe' -->
 
       <!-- Begin 'Wie' -->
-      <div id="five">
-        <div class="row" style="margin-top:15px">
-          <div class="col">
-            <h1>Wie</h1>
-          </div>
-          <div class="col" style="margin-top: 20px">
-            Wie gaat er allemaal met dit product aan de slag?
-          </div>
-          <div class="col" style="margin-top: 20px">
-            <lu style="list-style-type: none"
-              ><li>
-                De visual designer creert het ontwerp
-              </li>
-              <li>
-                De developers nemen het hierna over om het product te realiseren
-              </li>
-            </lu>
+      <div
+        id="five"
+        style="display: flex;
+    flex-direction: column;
+    justify-content: center;"
+      >
+        <div class="row" style="margin-bottom: 5vh; margin-right: 10px;">
+          <div class="col-sm"></div>
+          <div class="col-sm"><h1>WIE</h1></div>
+          <div class="col-8">
+            <p style="text-align: justify;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but
+              also the leap into electronic typesetting,
+            </p>
           </div>
         </div>
-        <div class="row" style="margin-top:15px">
-          <div class="col">
-            <h1></h1>
-          </div>
-          <div class="col" style="margin-top: 20px">
-            Wie zijn de belangrijkste auteurs en 'though-leaders' en 'guru's die
-            schrijven over dit onderwerp?
-          </div>
-          <div class="col" style="margin-top: 20px">
-            <lu style="list-style-type: none"
-              ><li>
-                Josef Müller-Brockmann - Grid systems
-              </li>
-              <li>
-                Khoi Vinh - Ordering Disorder
-              </li>
-              <li>
-                Mark Boulton - Designing for the Web
-              </li>
-            </lu>
+
+        <div class="row">
+          <div class="col-sm">
+            <img src="images/wie.png" alt="Trulli" style=" height: 370px;" />
           </div>
         </div>
       </div>
