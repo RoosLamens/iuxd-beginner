@@ -41,13 +41,14 @@
 
       #one {
         padding-top: 50px;
-        height: 100vh;
         color: black;
         background-color: #f5f5f5;
+        background-image: url("images/background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
       }
       #geschiedenis {
         padding-top: 50px;
-        height: 100vh;
         color: black;
         background-color: white;
       }
@@ -76,10 +77,548 @@
         color: black;
         background-color: white;
       }
+
+      .timeline {
+        position: relative;
+        padding: 4px 0 0 0;
+        margin-top: 22px;
+        list-style: none;
+      }
+
+      .timeline > li:nth-child(even) {
+        position: relative;
+        margin-bottom: 50px;
+        height: 180px;
+        right: -100px;
+      }
+
+      .timeline > li:nth-child(odd) {
+        position: relative;
+        margin-bottom: 50px;
+        height: 180px;
+        left: -100px;
+      }
+
+      .timeline > li:before,
+      .timeline > li:after {
+        content: " ";
+        display: table;
+      }
+
+      .timeline > li:after {
+        clear: both;
+        min-height: 170px;
+      }
+
+      .timeline > li .timeline-panel {
+        position: relative;
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+      }
+
+      .timeline > li .timeline-panel:before {
+        right: auto;
+        left: -15px;
+        border-right-width: 15px;
+        border-left-width: 0;
+      }
+
+      .timeline > li .timeline-panel:after {
+        right: auto;
+        left: -14px;
+        border-right-width: 14px;
+        border-left-width: 0;
+      }
+
+      .timeline > li .timeline-image {
+        z-index: 100;
+        position: absolute;
+        left: 50%;
+        border: 7px solid #3b5998;
+        border-radius: 100%;
+        background-color: #3b5998;
+        box-shadow: 0 0 5px #4582ec;
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+      }
+
+      .timeline > li .timeline-image h4 {
+        margin-top: 12px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      .timeline > li.timeline-inverted > .timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+      }
+
+      .timeline > li.timeline-inverted > .timeline-panel:before {
+        right: auto;
+        left: -15px;
+        border-right-width: 15px;
+        border-left-width: 0;
+      }
+
+      .timeline > li.timeline-inverted > .timeline-panel:after {
+        right: auto;
+        left: -14px;
+        border-right-width: 14px;
+        border-left-width: 0;
+      }
+
+      .timeline > li:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline .timeline-heading h4 {
+        margin-top: 22px;
+        margin-bottom: 4px;
+        padding: 0;
+        color: #b3b3b3;
+      }
+
+      .timeline .timeline-heading h4.subheading {
+        margin: 0;
+        padding: 0;
+        text-transform: none;
+        font-size: 18px;
+        color: #333333;
+      }
+
+      .timeline .timeline-body > p,
+      .timeline .timeline-body > ul {
+        margin-bottom: 0;
+        color: #808080;
+      }
+      /*Style for even div.line*/
+      .timeline > li:nth-child(odd) .line:before {
+        content: "";
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 690px;
+        width: 4px;
+        height: 340px;
+        background-color: #3b5998;
+        -ms-transform: rotate(-44deg); /* IE 9 */
+        -webkit-transform: rotate(-44deg); /* Safari */
+        transform: rotate(-44deg);
+        box-shadow: 0 0 5px #4582ec;
+      }
+      /*Style for odd div.line*/
+      .timeline > li:nth-child(even) .line:before {
+        content: "";
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 450px;
+        width: 4px;
+        height: 340px;
+        background-color: #3b5998;
+        -ms-transform: rotate(44deg); /* IE 9 */
+        -webkit-transform: rotate(44deg); /* Safari */
+        transform: rotate(44deg);
+        box-shadow: 0 0 5px #4582ec;
+      }
+      /* Medium Devices, .visible-md-* */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .timeline > li:nth-child(even) {
+          margin-bottom: 0px;
+          min-height: 0px;
+          right: 0px;
+        }
+        .timeline > li:nth-child(odd) {
+          margin-bottom: 0px;
+          min-height: 0px;
+          left: 0px;
+        }
+        .timeline > li:nth-child(even) .timeline-image {
+          left: 0;
+          margin-left: 0px;
+        }
+        .timeline > li:nth-child(odd) .timeline-image {
+          left: 690px;
+          margin-left: 0px;
+        }
+        .timeline > li:nth-child(even) .timeline-panel {
+          width: 76%;
+          padding: 0 0 20px 0px;
+          text-align: left;
+        }
+        .timeline > li:nth-child(odd) .timeline-panel {
+          width: 70%;
+          padding: 0 0 20px 0px;
+          text-align: right;
+        }
+        .timeline > li .line {
+          display: none;
+        }
+      }
+      /* Small Devices, Tablets */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .timeline > li:nth-child(even) {
+          margin-bottom: 0px;
+          min-height: 0px;
+          right: 0px;
+        }
+        .timeline > li:nth-child(odd) {
+          margin-bottom: 0px;
+          min-height: 0px;
+          left: 0px;
+        }
+        .timeline > li:nth-child(even) .timeline-image {
+          left: 0;
+          margin-left: 0px;
+        }
+        .timeline > li:nth-child(odd) .timeline-image {
+          left: 520px;
+          margin-left: 0px;
+        }
+        .timeline > li:nth-child(even) .timeline-panel {
+          width: 70%;
+          padding: 0 0 20px 0px;
+          text-align: left;
+        }
+        .timeline > li:nth-child(odd) .timeline-panel {
+          width: 70%;
+          padding: 0 0 20px 0px;
+          text-align: right;
+        }
+        .timeline > li .line {
+          display: none;
+        }
+      }
+      /* Custom, iPhone Retina */
+      @media only screen and (max-width: 767px) {
+        .timeline > li:nth-child(even) {
+          margin-bottom: 0px;
+          min-height: 0px;
+          right: 0px;
+        }
+        .timeline > li:nth-child(odd) {
+          margin-bottom: 0px;
+          min-height: 0px;
+          left: 0px;
+        }
+        .timeline > li .timeline-image {
+          position: static;
+          width: 150px;
+          height: 150px;
+          margin-bottom: 0px;
+        }
+        .timeline > li:nth-child(even) .timeline-image {
+          left: 0;
+          margin-left: 0;
+        }
+        .timeline > li:nth-child(odd) .timeline-image {
+          float: right;
+          left: 0px;
+          margin-left: 0;
+        }
+        .timeline > li:nth-child(even) .timeline-panel {
+          width: 100%;
+          padding: 0 0 20px 14px;
+        }
+        .timeline > li:nth-child(odd) .timeline-panel {
+          width: 100%;
+          padding: 0 14px 20px 0px;
+        }
+        .timeline > li .line {
+          display: none;
+        }
+      }
+
+      #portfolio .portfolio-item {
+        right: 0;
+        margin: 0 0 15px;
+      }
+
+      #portfolio .portfolio-item .portfolio-link {
+        position: relative;
+        display: block;
+        max-width: 400px;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+
+      #portfolio .portfolio-item .portfolio-link .portfolio-hover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all ease 0.5s;
+        opacity: 0;
+        background: rgba(254, 209, 54, 0.9);
+      }
+
+      #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+        opacity: 1;
+      }
+
+      #portfolio
+        .portfolio-item
+        .portfolio-link
+        .portfolio-hover
+        .portfolio-hover-content {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 20px;
+        margin-top: -12px;
+        text-align: center;
+        color: white;
+      }
+
+      #portfolio
+        .portfolio-item
+        .portfolio-link
+        .portfolio-hover
+        .portfolio-hover-content
+        i {
+        margin-top: -12px;
+      }
+
+      #portfolio
+        .portfolio-item
+        .portfolio-link
+        .portfolio-hover
+        .portfolio-hover-content
+        h3,
+      #portfolio
+        .portfolio-item
+        .portfolio-link
+        .portfolio-hover
+        .portfolio-hover-content
+        h4 {
+        margin: 0;
+      }
+
+      #portfolio .portfolio-item .portfolio-caption {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 25px;
+        text-align: center;
+        background-color: #fff;
+      }
+
+      #portfolio .portfolio-item .portfolio-caption h4 {
+        margin: 0;
+        text-transform: none;
+      }
+
+      #portfolio .portfolio-item .portfolio-caption p {
+        font-size: 16px;
+        font-style: italic;
+        margin: 0;
+        font-family: "Droid Serif", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+
+      #portfolio * {
+        z-index: 2;
+      }
+
+      @media (min-width: 767px) {
+        #portfolio .portfolio-item {
+          margin: 0 0 30px;
+        }
+      }
+
+      .portfolio-modal .modal-dialog {
+        margin: 1rem;
+        max-width: 100vw;
+      }
+
+      .portfolio-modal .modal-content {
+        padding: 100px 0;
+        text-align: center;
+      }
+
+      .portfolio-modal .modal-content h2 {
+        font-size: 3em;
+        margin-bottom: 15px;
+      }
+
+      .portfolio-modal .modal-content p {
+        margin-bottom: 30px;
+      }
+
+      .portfolio-modal .modal-content p.item-intro {
+        font-size: 16px;
+        font-style: italic;
+        margin: 20px 0 30px;
+        font-family: "Droid Serif", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+
+      .portfolio-modal .modal-content ul.list-inline {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+
+      .portfolio-modal .modal-content img {
+        margin-bottom: 30px;
+      }
+
+      .portfolio-modal .modal-content button {
+        cursor: pointer;
+      }
+
+      .portfolio-modal .close-modal {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 75px;
+        height: 75px;
+        cursor: pointer;
+        background-color: transparent;
+      }
+
+      .portfolio-modal .close-modal:hover {
+        opacity: 0.3;
+      }
+
+      .portfolio-modal .close-modal .lr {
+        /* Safari and Chrome */
+        z-index: 1051;
+        width: 1px;
+        height: 75px;
+        margin-left: 35px;
+        /* IE 9 */
+        transform: rotate(45deg);
+        background-color: #212529;
+      }
+
+      .portfolio-modal .close-modal .lr .rl {
+        /* Safari and Chrome */
+        z-index: 1052;
+        width: 1px;
+        height: 75px;
+        /* IE 9 */
+        transform: rotate(90deg);
+        background-color: #212529;
+      }
+
+      a {
+        color: white;
+      }
+
+      a:hover {
+        color: grey;
+      }
+
+
+      .modal.left .modal-dialog,
+	.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 320px;
+		height: 100%;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+	}
+
+	.modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+	
+	.modal.left .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 80px;
+	}
+
+/*Left*/
+	.modal.left.fade .modal-dialog{
+		left: -320px;
+		-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+		        transition: opacity 0.3s linear, left 0.3s ease-out;
+	}
+	
+	.modal.left.fade.in .modal-dialog{
+		left: 0;
+	}
+        
+/*Right*/
+	.modal.right.fade .modal-dialog {
+		right: -320px;
+		-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+		        transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+	
+	.modal.right.fade.in .modal-dialog {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+		border-bottom-color: #EEEEEE;
+		background-color: #FAFAFA;
+	}
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+	background-color: #78909C;
+}
+
+.demo {
+	padding-top: 60px;
+	padding-bottom: 110px;
+}
+
+.btn-demo {
+	margin: 15px;
+	padding: 10px 15px;
+	border-radius: 0;
+	font-size: 16px;
+	background-color: #FFFFFF;
+}
+
+.btn-demo:focus {
+	outline: 0;
+}
+
+.demo-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 15px;
+	background-color: #212121;
+	text-align: center;
+}
+
+.demo-footer > a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+}
+
     </style>
     <title>Grids - Charlie Souisa & Roos Lamens</title>
   </head>
-  <body style="overflow-y:hidden;">
+  <body>
     <!-- Begin Header-->
     <div class="container position-fixed fixed-top">
       <div class="row">
@@ -149,48 +688,53 @@
     <!-- Begin Introductie-->
     <div
       class="container"
-      class="row"
       data-spy="scroll"
       data-target="#navbar-example2"
       data-offset="0"
     >
-      <div
-        id="one"
-        style="display: flex;
-      flex-direction: column;
-      justify-content: center;"
-      >
-        <div class="row" style="margin-bottom: 10vh; margin-right: 10px;">
-          <div class="col-sm"></div>
-          <div class="col-sm"><h1>INTRODUCTIE</h1></div>
-          <div class="col-6">
-            <p style="text-align: justify;">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting,
-            </p>
+      <div class="row">
+        <div
+          id="one"
+          style=" display: flex; justify-content: center; flex-direction: column;"
+        >
+          <div class="row ">
+            <div class="col-lg-3 "></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 ">
+              <h1>INTRODUCTIE</h1>
+              <p style="text-align: justify;">
+                " Grids aren’t just useful for us as designers or developers -
+                they’re good for the user, too. After all, the user is there to
+                consume your content and you want to make it as good an
+                experience for them as you can. Having a solid grid system to
+                use in your designs will allow you to do just that, by creating
+                consistency and familiarity and thus building trust in your
+                design. “
+                <br />
+                <br />
+                by Rachel Shillcock, 22 Aug 2013
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-sm" style="margin-left:30px" ;>
-            <img
+          <div class="row ">
+            <div class="col-lg ">
+              <!-- <img
               src="images/example.png"
               alt="Trulli"
               width="500"
               height="333"
-            />
-          </div>
-          <div
-            class="col-sm"
-            style="display: flex;
-          flex-direction: column;
-          align-items: center;"
-          >
-            <h1 style="margin-left: -177px;">
+            /> -->
+              <h1 style="font-size: 450px;">01</h1>
+            </div>
+            <div
+              class="col-lg"
+              style="display: flex;
+          flex-direction: row-reverse;
+          align-items: flex-end;"
+            >
+              <h1 style="font-size: 300px; margin-bottom: 27px;">+</h1>
+              <!-- <h1 style="margin-left: -177px;">
               header
             </h1>
             <p style="max-width: 300px; text-align: justify;">
@@ -199,7 +743,8 @@
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
-            </p>
+            </p> -->
+            </div>
           </div>
         </div>
       </div>
@@ -211,56 +756,122 @@
         id="geschiedenis"
         style="display: flex;
       flex-direction: column;
-      justify-content: center;"
+      justify-content: center;
+      margin-bottom: 35px;"
       >
-        <div
-          class="row"
-          style="margin-bottom: 5vh; margin-left: 10px; margin-right: 10px;"
-        >
-          <div class="col-sm">
-            <h1>GESCHIEDENIS</h1>
-            <p style="max-width: 270px; text-align: justify;">
-              Ondanks grid systemen vandaag de dag niet weg te denken zijn in het ontwerp van 
-              interactieve producten, zijn ze al eeuwen oud. Een van de eerste grids die we uit 
-              de oudheid terug gevonden hebben komt voort uit het jaar 3300 - 332 BC en komt uit 
-              het oude Egypte.
-              
-              Één van de dingen waar de Egyptenaren bekend om stonden zijn de hiërogliefen. 
-              Deze muurtekeningen werden toen de tijd met grote precisie getekend. 
-              Ze hadden zelfs een specifiek grid gecreëerd, waarmee ze de proporties van de tekeningen 
-              met precisie konden natekenen. Dit deden ze met de verhouding van de menselijke vuist, 
-              wanneer je de lengte 18 keer vermenigvuldig heb je de lengte van het persoon.
-
-              Gutenberg bijbel
-              Later werden grids ook gebruikt voor het vormgeven van drukwerk, één van de belangrijkste ontwerpen 
-              is die van het eerste gedrukte boek. Die werd in de Duitsland in de stad Mainz, gedrukt door 
-              Johannes Gutenberg in het jaar 1452. Het grid bestaat uit een 42 lijnen en 2 kolommen, dit is een 
-              Manuscript grid. Het staat bekend als een klassiek en traditioneel grid met een layout dat op bijna 
-              pagina’s van de spread hetzelfde zijn. 
-
-              Josef Müller-Brockmann
-              Muller-Brockmann geboren in 1914 in Rapperswil Zwitserland.
-              
-              Hij is één van de grote namen binnen grafisch ontwerp en staat bekend als de grootvader van 
-              “Swiss Design”. Hij studeerde architectuur, design, kunstgeschiedenis aan de universiteit Kunstgewerbeschule Zürich.
-              Zijn werk is zwaar beïnvloed door de Bauhaus stijl en is te herkennen aan de duidelijke typografie 
-              en geometrische vormen. Daarnaast is zijn werk uiteraard te herkennen aan de grid-geinspireerd ontwerp.
-
-              Grids in web en UI design
-              In de begindagen van het web gebruikten ontwikkelaars vaak tabellen om een ​​lay-out te creëren. 
-              Sindsdien zijn we qua grids flink ontwikkeld en hebben we nu tools zoals Flexbox en CSS Grid die 
-              een basiskader bieden voor het implementeren van rastersystemen in websites en apps
-
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="text-center">GESCHEIDENIS</h1>
+            <p class="text-center">
+              Hieronder vindt je een grove tijdlijn van belangrijke momenten als
+              het gaat om grids.
             </p>
-          </div>
-          <div class="col-sm">
-            <img
-              src="images/geschiedenis.jpg"
-              alt="Trulli"
-              style="width: 60vh;"
-            />
+            <ul class="timeline">
+              <li>
+                <a
+                  class="portfolio-link"
+                  data-toggle="modal"
+                  href="#egyptenaren"
+                >
+                  <div
+                    class="timeline-image"
+                    style="display: flex; justify-content: center;
+                  align-items: center;"
+                  >
+                    <h1>3300 <br />332 BC</h1>
+                  </div>
+                </a>
+
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Egyptenaren</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">
+                      Ondanks grid systemen vandaag de dag niet weg te denken
+                      zijn in het ontwerp van interactieve producten, zijn ze al
+                      eeuwen oud. Een van de eerste grids.........
+                    </p>
+                  </div>
+                </div>
+                <div class="line"></div>
+              </li>
+              <li class="timeline-inverted">
+                <a class="portfolio-link" data-toggle="modal" href="#gutenberg">
+                  <div
+                    class="timeline-image"
+                    style="display: flex; justify-content: center;
+                  align-items: center;"
+                  >
+                    <h1>1452</h1>
+                  </div>
+                </a>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Gutenberg bijbel</h4>
+                    <h4 class="subheading"></h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">
+                      Later werden grids ook gebruikt voor het vormgeven van
+                      drukwerk één van de belangrijkste ontwerpen is .......
+                    </p>
+                  </div>
+                </div>
+                <div class="line"></div>
+              </li>
+              <li>
+                <a class="portfolio-link" data-toggle="modal" href="#josef">
+                  <div
+                    class="timeline-image"
+                    style="display: flex; justify-content: center;
+                  align-items: center;"
+                  >
+                    <h1>1914</h1>
+                  </div>
+                </a>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Josef Müller-Brockmann</h4>
+                    <h4 class="subheading"></h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">
+                      Hij is één van de grote namen binnen grafisch ontwerp en
+                      staat bekend als .......
+                    </p>
+                  </div>
+                </div>
+                <div class="line"></div>
+              </li>
+              <li class="timeline-inverted">
+                <a class="portfolio-link" data-toggle="modal" href="#heden">
+                  <div
+                    class="timeline-image"
+                    style="display: flex; justify-content: center;
+                  align-items: center;"
+                  >
+                    <h1>heden</h1>
+                  </div>
+                </a>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Grids in web en UI design</h4>
+                    <h4 class="subheading"></h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">
+                      In de begindagen van het web gebruikten ontwikkelaars vaak
+                      tabellen om een ​​lay-out te creëren. Sindsdien zijn we
+                      qua grids flink ontwikkeld en ........
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
+       
       </div>
       <!-- Einde 'Geschiedenis'-->
 
@@ -268,37 +879,92 @@
       <div
         id="two"
         style="display: flex;
-      flex-direction: column;
-      justify-content: center;"
+    flex-direction: column;
+    justify-content: center;"
       >
-        <div class="row" style="margin-bottom: 5vh; margin-right: 10px;">
-          <div class="col-sm"></div>
-          <div class="col-sm"><h1>WAT</h1></div>
-          <div class="col-8">
-            <p style="text-align: justify;">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting,
+        <div class="row" style=" margin-left: 10px; margin-right: 10px;">
+          <div
+            class="col-sm"
+            style="display: flex;
+        flex-direction: column;
+        align-items: center;"
+          >
+            <h1>WAT</h1>
+            <p style="max-width: 374px; text-align: justify;">
+              Een grid systeem is een raster voor het ordenen van de lay-out. De
+              lay-outs kan worden afgedrukt (zoals een boek, tijdschrift of
+              poster) of voor een scherm (zoals een webpagina, app of andere
+              gebruikersinterface).
+              <br />
+              <br />
+              Een grid systeem bestaat uit de volgende elementen:
+              <br />* Units <br />* Columns <br />* Regions <br />* Fields
+              <br />* Baseline grid <br />* Gutters <br />* Margins and padding
+              <br />* Elements
             </p>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm" style="display: flex; justify-content: center;">
-            <img
-              src="images/Sony-15col-grid.jpg"
-              alt="Trulli"
-              style="width: inherit; height: 370px;"
-            />
+          <div class="col-sm">
+            <img src="images/hoe.png" alt="Trulli" style="width: 60vh;" />
           </div>
+        </div>
+        <div class="row">
+          <div class="container demo">
+	
+	
+            <div class="text-center">
+              <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
+                Left Sidebar Modal
+              </button>
+          
+              <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">
+                Right Sidebar Modal
+              </button>
+            </div>
+          
+            <!-- Modal -->
+            <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+          
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Left Sidebar</h4>
+                  </div>
+          
+                  <div class="modal-body">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </p>
+                  </div>
+          
+                </div><!-- modal-content -->
+              </div><!-- modal-dialog -->
+            </div><!-- modal -->
+            
+            <!-- Modal -->
+            <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+          
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">Right Sidebar</h4>
+                  </div>
+          
+                  <div class="modal-body">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </p>
+                  </div>
+          
+                </div><!-- modal-content -->
+              </div><!-- modal-dialog -->
+            </div><!-- modal -->
+            
+            
+          </div><!-- container -->
+          
+          <footer class="demo-footer">
+            <a href="http://www.bootpen.com" target="_blank">Get more code snippets</a>
+          </footer>
         </div>
       </div>
       <!-- Einde 'Wat'-->
@@ -415,6 +1081,232 @@
       </div>
     </div>
 
+    <!-- Modal 1 -->
+    <div
+      class="portfolio-modal modal fade"
+      id="egyptenaren"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Egyptenaren</h2>
+                  <p class="item-intro text-muted"></p>
+                  <p>
+                    Ondanks grid systemen vandaag de dag niet weg te denken zijn
+                    in het ontwerp van interactieve producten, zijn ze al eeuwen
+                    oud. Een van de eerste grids die we uit de oudheid terug
+                    gevonden hebben komt voort uit het jaar 3300 - 332 BC en
+                    komt uit het oude Egypte.
+                    <br /><br />
+                    Één van de dingen waar de Egyptenaren bekend om stonden zijn
+                    de hiërogliefen. Deze muurtekeningen werden toen de tijd met
+                    grote precisie getekend. Ze hadden zelfs een specifiek grid
+                    gecreëerd, waarmee ze de proporties van de tekeningen met
+                    precisie konden natekenen. Dit deden ze met de verhouding
+                    van de menselijke vuist, wanneer je de lengte 18 keer
+                    vermenigvuldig heb je de lengte van het persoon.
+                  </p>
+
+                  <img
+                    class="img-fluid d-block mx-auto"
+                    src="img/journey/kickoff/groepsfoto.jpg"
+                    alt=""
+                  />
+
+                  <button
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                    type="button"
+                  >
+                    <i class="fas fa-times"></i>
+                    Sluiten
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div
+      class="portfolio-modal modal fade"
+      id="gutenberg"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Gutenberg Bijbel</h2>
+                  <p class="item-intro text-muted"></p>
+                  <p>
+                    Later werden grids ook gebruikt voor het vormgeven van
+                    drukwerk één van de belangrijkste ontwerpen is die van het
+                    eerste gedrukte boek. Die werd in de Duitsland in de stad
+                    Mainz, gedrukt door Johannes Gutenberg in het jaar 1452. Het
+                    grid bestaat uit een 42 lijnen en 2 kolommen, dit is een
+                    Manuscript grid. Het staat bekend als een klassiek en
+                    traditioneel grid met een layout dat op bijna pagina’s van
+                    de spread hetzelfde zijn.
+                  </p>
+
+                  <img
+                    class="img-fluid d-block mx-auto"
+                    src="img/journey/kickoff/groepsfoto.jpg"
+                    alt=""
+                  />
+
+                  <button
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                    type="button"
+                  >
+                    <i class="fas fa-times"></i>
+                    Sluiten
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div
+      class="portfolio-modal modal fade"
+      id="josef"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Josef Müller-Brockmann</h2>
+                  <p class="item-intro text-muted"></p>
+                  <p>
+                    Muller-Brockmann geboren in 1914 in Rapperswil Zwitserland.
+                    <br />
+                    <br />
+
+                    Hij is één van de grote namen binnen grafisch ontwerp en
+                    staat bekend als de grootvader van “Swiss Design”. Hij
+                    studeerde architectuur, design, kunstgeschiedenis aan de
+                    universiteit Kunstgewerbeschule Zürich.
+                    <br />
+                    <br />Zijn werk is zwaar beïnvloed door de Bauhaus stijl en
+                    is te herkennen aan de duidelijke typografie en geometrische
+                    vormen. Daarnaast is zijn werk uiteraard te herkennen aan de
+                    grid-geinspireerd ontwerp.
+                  </p>
+
+                  <img
+                    class="img-fluid d-block mx-auto"
+                    src="img/journey/kickoff/groepsfoto.jpg"
+                    alt=""
+                  />
+
+                  <button
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                    type="button"
+                  >
+                    <i class="fas fa-times"></i>
+                    Sluiten
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div
+      class="portfolio-modal modal fade"
+      id="heden"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Grids in web en UI design</h2>
+                  <p class="item-intro text-muted"></p>
+                  <p>
+                    In de begindagen van het web gebruikten ontwikkelaars vaak
+                    tabellen om een ​​lay-out te creëren. Sindsdien zijn we qua
+                    grids flink ontwikkeld en hebben we nu tools zoals Flexbox
+                    en CSS Grid die een basiskader bieden voor het implementeren
+                    van rastersystemen in websites en apps
+                  </p>
+
+                  <img
+                    class="img-fluid d-block mx-auto"
+                    src="img/journey/kickoff/groepsfoto.jpg"
+                    alt=""
+                  />
+
+                  <button
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                    type="button"
+                  >
+                    <i class="fas fa-times"></i>
+                    Sluiten
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
