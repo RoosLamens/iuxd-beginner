@@ -59,7 +59,7 @@
       }
       #three {
         padding-top: 50px;
-        height: 100vh;
+
         color: black;
         background-color: white;
       }
@@ -545,6 +545,16 @@
       .hover:hover {
         background-color: #3b5998;
       }
+
+      .dot {
+        height: 220px;
+        width: 220px;
+        background-color: #3b5998;
+        border-radius: 50%;
+        display: flex;
+        color: white;
+        padding: 30px;
+              }
     </style>
     <title>Grids - Charlie Souisa & Roos Lamens</title>
   </head>
@@ -801,35 +811,6 @@
             </ul>
           </div>
         </div>
-        <!-- 
-      
-        <div
-          class="row"
-          style="margin-bottom: 5vh; margin-left: 10px; margin-right: 10px;"
-        >
-          <div class="col-sm">
-            <h1>GESCHIEDENIS</h1>
-            <p style="max-width: 270px; text-align: justify;">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into Lorem
-              Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-            </p>
-          </div>
-          <div class="col-sm">
-            <img
-              src="images/geschiedenis.jpg"
-              alt="Trulli"
-              style="width: 60vh;"
-            />
-          </div>
-        </div> -->
       </div>
       <!-- Einde 'Geschiedenis'-->
 
@@ -844,12 +825,7 @@
           <div class="col-lg">
             <img src="images/hoe.png" alt="Trulli" style="width: 60vh;" />
           </div>
-          <div
-            class="col-lg"
-            style="display: flex;
-        flex-direction: column;
-        align-items: center;"
-          >
+          <div class="col-lg">
             <h1>WAT</h1>
             <p style="max-width: 374px; text-align: justify;">
               Een grid systeem is een raster voor het ordenen van de lay-out. De
@@ -859,7 +835,6 @@
               <br />
               <br />
               Een grid systeem bestaat uit de volgende elementen:
-             
             </p>
             <ul style="list-style-type: none;">
               <li style="cursor: pointer;">
@@ -868,44 +843,48 @@
                 </a>
               </li>
               <li style="cursor: pointer;">
-                <a class="hover" data-toggle="modal" data-target="#units">
+                <a class="hover" data-toggle="modal" data-target="#columns">
                   * Columns
                 </a>
               </li>
               <li style="cursor: pointer;">
-                <a class="hover" data-toggle="modal" data-target="#units">
-                  * Regions 
+                <a class="hover" data-toggle="modal" data-target="#regions">
+                  * Regions
                 </a>
               </li>
               <li style="cursor: pointer;">
-                <a class="hover" data-toggle="modal" data-target="#units">
+                <a class="hover" data-toggle="modal" data-target="#fields">
                   * Fields
                 </a>
               </li>
               <li style="cursor: pointer;">
-                <a class="hover" data-toggle="modal" data-target="#units">
-                  * Baseline grid 
+                <a
+                  class="hover"
+                  data-toggle="modal"
+                  data-target="#baselinegrid"
+                >
+                  * Baseline grid
                 </a>
               </li>
               <li style="cursor: pointer;">
-                <a class="hover" data-toggle="modal" data-target="#units">
+                <a class="hover" data-toggle="modal" data-target="#gutters">
                   * Gutters
                 </a>
               </li>
               <li style="cursor: pointer;">
-                <a class="hover" data-toggle="modal" data-target="#units">
-                  *  Margins and padding
+                <a class="hover" data-toggle="modal" data-target="#margins">
+                  * Margins and padding
                 </a>
               </li>
               <li style="cursor: pointer;">
-                <a class="hover" data-toggle="modal" data-target="#units">
-                  *  Elements
+                <a class="hover" data-toggle="modal" data-target="#elements">
+                  * Elements
                 </a>
               </li>
             </ul>
           </div>
-         
 
+          <!-- units -->
           <div class="container demo">
             <div
               class="modal fade  come-from-modal right"
@@ -925,12 +904,60 @@
                     >
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="myModalLabel">Units</h4>
+                    <h4 class="modal-title" id="myModalLabel">
+                      Units
+                    </h4>
+                    <p>
+                      Units kunnen worden gezien als de bouwsteen van een grid,
+                      het zijn meerdere verticale eenheden van dezelfde afmeting
+                      waarmee de pagina word opgedeeld.
+                    </p>
                   </div>
-                  <div class="modal-body">
-                    Units kunnen worden gezien als de bouwsteen van een grid,
-                    het zijn meerdere verticale eenheden van dezelfde afmeting
-                    waarmee de pagina word opgedeeld.
+
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      type="button"
+                    >
+                      <i class="fas fa-times"></i>
+                      Sluiten
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- einde units -->
+          <!-- columns -->
+          <div class="container demo">
+            <div
+              class="modal fade  come-from-modal right"
+              id="columns"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 10px;">
+                  <div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Columns</h4>
+                    <p>
+                      Kolommen zijn groepen Units, gecombineerd om werkbare
+                      gebieden te creëren voor de presentatie van de content. De
+                      meeste tekstkolommen vereisen bijvoorbeeld dat twee of
+                      meer eenheden werkbaar zijn. Een Grid systeem van
+                      bijvoorbeeld 16 eenheden kan worden gecombineerd in 2
+                      kolommen van 8 eenheden, of 4 kolommen van 4 eenheden.
+                    </p>
                   </div>
                   <div class="modal-footer">
                     <button
@@ -946,7 +973,285 @@
               </div>
             </div>
           </div>
-          <!-- container -->
+          <!-- einde columns -->
+
+          <!-- regions -->
+          <div class="container demo">
+            <div
+              class="modal fade  come-from-modal right"
+              id="regions"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 10px;">
+                  <div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Regions</h4>
+                    <p>
+                      Een Region is een groep van meerdere soortgelijke kolommen
+                      die één deel van de pagina vormen. Bijvoorbeeld in een
+                      grid van 4 kolommen, kunnen de eerste 3 kolommen vanaf de
+                      linkerzijde één region vormen voor één soort content, de
+                      resterende kolom aan de rechter kant vormt een andere
+                      Region.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      type="button"
+                    >
+                      <i class="fas fa-times"></i>
+                      Sluiten
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- einde regions -->
+
+          <!-- fields -->
+          <div class="container demo">
+            <div
+              class="modal fade  come-from-modal right"
+              id="fields"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 10px;">
+                  <div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Fields</h4>
+                    <p>
+                      Een Field is een horizontale indeling van de pagina.
+                      Fields zijn handig om de hoogte van een region te bepalen
+                      en hierdoor meerdere secties op de Y-as mee te creëren.
+                      <br /><br />Hierdoor kan een ontwerper sneller elementen
+                      op de Y-as plaatsen en zijn compositie bepalen.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      type="button"
+                    >
+                      <i class="fas fa-times"></i>
+                      Sluiten
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- einde fields -->
+
+          <!-- baseline grid -->
+          <div class="container demo">
+            <div
+              class="modal fade  come-from-modal right"
+              id="baselinegrid"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 10px;">
+                  <div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Baseline Grid</h4>
+                    <p>
+                      In traditionele typografie is de basislijn de onzichtbare
+                      lijn waarop de lettervorm rust, bijvoorbeeld de onderrand
+                      van een hoofdletter E rust op de basislijn, terwijl de
+                      staart van een kleine letter p eronder valt.
+
+                      <br /><br />De baseline grid (basislijnraster) wordt
+                      gevormd door een herhaling van boven naar beneden van
+                      basislijnen die op afstand van elkaar staan, ​​volgens de
+                      line-spacing (regelafstand) van de tekst.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      type="button"
+                    >
+                      <i class="fas fa-times"></i>
+                      Sluiten
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- einde baseline grid -->
+
+          <!-- gutters -->
+          <div class="container demo">
+            <div
+              class="modal fade  come-from-modal right"
+              id="gutters"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 10px;">
+                  <div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Gutters</h4>
+                    <p>
+                      Gutters(goten) zijn de lege ruimtes tussen eenheden en
+                      kolommen. Gutters hebben alleen betrekking tot de ruimte
+                      tussen de units of kolommen, met uitzondering op de ruimte
+                      links van de meest linker unit en de ruimte op de meest
+                      rechter unit.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      type="button"
+                    >
+                      <i class="fas fa-times"></i>
+                      Sluiten
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- einde gutters -->
+
+          <!-- margins -->
+          <div class="container demo">
+            <div
+              class="modal fade  come-from-modal right"
+              id="margins"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 10px;">
+                  <div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                      Margins and padding
+                    </h4>
+                    <p>
+                      Margins is de ruimte buiten een unit of kolom. Je kan het
+                      eigenlijk zien als de buitenste Gutter van het Grid
+                      systeem. <br /><br />
+                      Padding is de ruimte binnen een unit of kolom. Het wordt
+                      gebruikt om een ​​kleine ruimte in een tekstblok te maken,
+                      zodat de tekst niet tegen de rand van de kolom staat.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      type="button"
+                    >
+                      <i class="fas fa-times"></i>
+                      Sluiten
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- einde margins -->
+
+          <!-- elements -->
+          <div class="container demo">
+            <div
+              class="modal fade  come-from-modal right"
+              id="elements"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="padding: 10px;">
+                  <div>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                      Elements
+                    </h4>
+                    <p>
+                      Een element is een enkele component van een lay-out. Dit
+                      kan bijvoorbeeld een header zijn, een tekstblok, een foto
+                      of een button.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                      type="button"
+                    >
+                      <i class="fas fa-times"></i>
+                      Sluiten
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- einde elements -->
         </div>
       </div>
       <!-- Einde 'Wat'-->
@@ -962,34 +1267,92 @@
           class="row"
           style="margin-bottom: 5vh; margin-left: 10px; margin-right: 10px;"
         >
-          <div class="col-sm">
+          <!-- <div class="col-sm">
             <img
               src="images/1920_grids_2x.png"
               alt="Trulli"
               style="width: 60vh;"
             />
-          </div>
-          <div
-            class="col-sm"
-            style="display: flex;
-          flex-direction: column;
-          align-items: center;"
-          >
-            <h1 style="margin-left: -94px;">WAAROM</h1>
-            <p style="max-width: 270px; text-align: justify;">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into Lorem
-              Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
+          </div> -->
+          <div class="col-lg-8">
+            <h1>WAAROM</h1>
+            <p style=" text-align: justify;">
+              Ontwerpers lossen problemen op. UI ontwerpers worden
+              geconfronteerd met het vinden van oplossingen voor visuele
+              problemen en het organiseren van deze oplossingen. En één manier
+              om deze problemen op te lossen is door het gebruik van een Grid
+              System. Het is één oplossing die meerdere voordelen met zich mee
+              brengt zoals:
+             
             </p>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+            style=" display: flex; justify-content: space-evenly; text-align:center"
+          >
+            <span class="dot"><p style="display: flex;
+              justify-content: center;
+              align-items: center;">Orde, continuiteit en harmonie</p></span>
+              </div>
+
+          </div>
+        </div>
+        
+        <div class="row" >
+          <div class="col-lg-12" > 
+            <div
+              style=" display: flex; justify-content: space-evenly; text-align:center"
+            >
+              <span class="dot"
+                ><p style="display: flex;
+                justify-content: center;
+                align-items: center;">
+                  Voorspellen waar informatie te vinden is
+                </p></span
+              >
+              <span class="dot"
+                ><p style="display: flex;
+                justify-content: center;
+                align-items: center;">
+                   Voorspellen hoe je moet navigeren
+                </p></span
+              >
+                         
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12" style="margin-bottom: 38px;">
+            <div
+            style=" display: flex; justify-content: space-evenly; text-align:center"
+          >
+          <span class="dot"
+          ><p style="display: flex;
+          justify-content: center;
+          align-items: center;">
+            Makkelijker om bepaalde inhoud aan website toe
+            te voegen
+          </p></span>  
+              </div>
+
+          </div>
+        </div>
+         
+          
+        <div class="row" style="margin-bottom: 5vh; margin-left: 10px; margin-right: 10px;">
+          <div class="col-lg-8"><p style=" text-align: justify;">
+            Het gebruik van een grid systeem lost zeker niet alle problemen op
+            voor een ontwerper, maar door het toepassen van deze oplossing los
+            je tegelijker tijd meerdere problemen op. De belangrijkste reden
+            waarom het zo vaak word gebruikt is dat het voor de gebruiker en
+            de ontwerper consistentie, orde en duidelijkheid biedt.
+          </p></div>
+        </div>
+       
       </div>
       <!--Eind 'Waarom'-->
 
@@ -1040,17 +1403,12 @@
           <div class="col-sm"><h1>WIE</h1></div>
           <div class="col-8">
             <p style="text-align: justify;">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries, but
-              also the leap into electronic typesetting,
+              Het gebruik van een Grid systeem word altijd al vanaf het begin
+              van de ontwerpfase gebruikt, omdat je hiermee het skelet van je
+              ontwerp opzet. Wanneer de ontwerper het grid heeft bepaald, word
+              vervolgens het gehele ontwerp hierop gebaseerd. Hierna word het
+              ontwerp doorgespeeld naar de developer, die het grid in html/css
+              nabouwt in code.
             </p>
           </div>
         </div>
