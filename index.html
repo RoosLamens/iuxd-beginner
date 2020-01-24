@@ -40,6 +40,8 @@
         padding-top: 50px;
         height: 100vh;
         background-color: white;
+
+
       }
 
       #one {
@@ -138,10 +140,9 @@
         z-index: 100;
         position: absolute;
         left: 50%;
-        border: 7px solid #3b5998;
+        border: 2px solid #b3b3b3;
         border-radius: 100%;
-        background-color: #3b5998;
-        box-shadow: 0 0 5px #4582ec;
+        background-color: #ee8572;
         width: 200px;
         height: 200px;
         margin-left: -100px;
@@ -204,13 +205,12 @@
         top: 60px;
         bottom: 0;
         left: 690px;
-        width: 4px;
+        width: 2px;
         height: 340px;
-        background-color: #3b5998;
+        background-color: #b3b3b3;
         -ms-transform: rotate(-44deg); /* IE 9 */
         -webkit-transform: rotate(-44deg); /* Safari */
         transform: rotate(-44deg);
-        box-shadow: 0 0 5px #4582ec;
       }
       /*Style for odd div.line*/
       .timeline > li:nth-child(even) .line:before {
@@ -219,13 +219,12 @@
         top: 60px;
         bottom: 0;
         left: 450px;
-        width: 4px;
+        width: 2px;
         height: 340px;
-        background-color: #3b5998;
+        background-color: #b3b3b3;
         -ms-transform: rotate(44deg); /* IE 9 */
         -webkit-transform: rotate(44deg); /* Safari */
         transform: rotate(44deg);
-        box-shadow: 0 0 5px #4582ec;
       }
       /* Medium Devices, .visible-md-* */
       @media (min-width: 992px) and (max-width: 1199px) {
@@ -546,7 +545,23 @@
       }
 
       .hover:hover {
-        background-color: #3b5998;
+        background-color: #ee8572;
+      }
+
+      .button{
+        background-color: #ee8572;
+        color: white;
+        border-radius: 4px;
+        padding: 12px 28px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+
+        
+      }
+
+      .button:hover{
+        background-color: #cf5340;
+
       }
 
     </style>
@@ -610,14 +625,17 @@
     <!--Begin Welkomscherm-->
     <div class="container" id="home">
       <div
-        class="container d-flex justify-content-center align-items-center"
-        style=" margin-top: 48px; min-height: 600px" data-aos="zoom-in-up"
+        style="display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; min-height: 600px" data-aos="zoom-in-up"
         data-aos-duration="3000"
       >
         <h1 style="font-size: 92px" class="zoom">
-          Herzlich Willkommen
+          Herzlich Willkommen.
         </h1>
-      </div>
+      </div> 
+      
     </div>
     <!--Einde Welkomscherm-->
 
@@ -637,7 +655,7 @@
             <div class="col-lg-3"></div>
             <div class="col-lg-6" data-aos="fade-left"  data-aos-duration="1000">
               <h1>INTRODUCTIE</h1>
-              <p style="text-align: justify; margin-right: 25px;">
+              <p style="text-align: justify; margin-right: 25px; font-style: italic;">
                 " Grids aren’t just useful for us as designers or developers -
                 they’re good for the user, too. After all, the user is there to
                 consume your content and you want to make it as good an
@@ -652,7 +670,7 @@
             </div>
           </div>
 
-          <div class="row"  style="margin-top: -125px;" data-aos="fade-up"  data-aos-duration="1000">
+          <div class="row"  style="margin-top: -200px;" data-aos="fade-up"  data-aos-duration="1000">
             <div class="col-lg ">
               <h1 style="font-size: 450px;">01</h1>
             </div>
@@ -680,16 +698,17 @@
         <div class="row">
           <div class="col-lg-12">
             <h1 class="text-center" data-aos="fade-up"  data-aos-duration="1000">GESCHEIDENIS</h1>
-            <p class="text-center" data-aos="fade-up"  data-aos-duration="1000">
-              Hieronder vindt je een grove tijdlijn van belangrijke momenten als
-              het gaat om grids. <br>Benieuwd naar de verschillende verhalen? Klik dan op het jaartal!
-            </p>
+              <h6 class="text-muted text-center" data-aos="fade-up"  data-aos-duration="1000">
+                Hieronder vindt je een grove tijdlijn van belangrijke momenten als
+                het gaat om grids. <br>Benieuwd naar de verschillende verhalen? Klik dan op het jaartal!</h6>
+             
             <ul class="timeline">
               <li >
                 <a
                   class="portfolio-link"
                   data-toggle="modal"
                   href="#egyptenaren"
+                  style="color:white;"
                 >
                   <div data-aos="zoom-in" data-aos-duration="1000"
                     class="timeline-image"
@@ -705,17 +724,18 @@
                     <h4>Egyptenaren</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">
+                    <p class="text-muted" style="font-style: italic; font-size:12px; float: right;
+                    max-width: 150px;">
                       Ondanks grid systemen vandaag de dag niet weg te denken
                       zijn in het ontwerp van interactieve producten, zijn ze al
-                      eeuwen oud. Een van de eerste grids.........
+                      eeuwen oud. Een van de eerste grids .......
                     </p>
                   </div>
                 </div>
                 <div class="line"></div>
               </li>
               <li class="timeline-inverted">
-                <a class="portfolio-link" data-toggle="modal" href="#gutenberg">
+                <a class="portfolio-link" data-toggle="modal" href="#gutenberg" style="color:white;">
                   <div data-aos="zoom-in" data-aos-duration="1000"
                     class="timeline-image"
                     style="display: flex; justify-content: center;
@@ -724,13 +744,14 @@
                     <h1>1452</h1>
                   </div>
                 </a>
-                <div class="timeline-panel" data-aos="fade-down-left" data-aos-duration="1000">
+                <div class="timeline-panel" data-aos="fade-down-right" data-aos-duration="1000">
                   <div class="timeline-heading">
                     <h4>Gutenberg bijbel</h4>
                     <h4 class="subheading"></h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">
+                    <p class="text-muted" style="font-style: italic; font-size:12px; float: left;
+                    max-width: 160px;">
                       Later werden grids ook gebruikt voor het vormgeven van
                       drukwerk één van de belangrijkste ontwerpen is .......
                     </p>
@@ -739,7 +760,7 @@
                 <div class="line"></div>
               </li>
               <li>
-                <a class="portfolio-link" data-toggle="modal" href="#josef">
+                <a class="portfolio-link" data-toggle="modal" href="#josef" style="color:white;">
                   <div data-aos="zoom-in" data-aos-duration="1000"
                     class="timeline-image"
                     style="display: flex; justify-content: center;
@@ -754,7 +775,8 @@
                     <h4 class="subheading"></h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">
+                    <p class="text-muted" style="font-style: italic; font-size:12px; float: right;
+                    max-width: 160px;">
                       Hij is één van de grote namen binnen grafisch ontwerp en
                       staat bekend als .......
                     </p>
@@ -763,7 +785,7 @@
                 <div class="line"></div>
               </li>
               <li class="timeline-inverted">
-                <a class="portfolio-link" data-toggle="modal" href="#heden">
+                <a class="portfolio-link" data-toggle="modal" href="#heden" style="color:white;">
                   <div data-aos="zoom-in" data-aos-duration="1000"
                     class="timeline-image"
                     style="display: flex; justify-content: center;
@@ -772,13 +794,14 @@
                     <h1>heden</h1>
                   </div>
                 </a>
-                <div class="timeline-panel" data-aos="fade-down-left" data-aos-duration="1000">
+                <div class="timeline-panel" data-aos="fade-down-right" data-aos-duration="1000">
                   <div class="timeline-heading">
-                    <h4>Grids in web en UI design</h4>
+                    <h4>Grids in web en <br>UI design</h4>
                     <h4 class="subheading"></h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">
+                    <p class="text-muted" style="font-style: italic; font-size:12px; float: left;
+                    max-width: 150px;">
                       In de begindagen van het web gebruikten ontwikkelaars vaak
                       tabellen om een ​​lay-out te creëren. Sindsdien zijn we
                       qua grids flink ontwikkeld en ........
@@ -802,9 +825,11 @@
         <div class="row" style=" margin-left: 10px; margin-right: 10px;" >
           <div class="col-lg" data-aos="fade-up"  data-aos-duration="1000">
             <img src="images/hoe.png" alt="Trulli" style="width: 60vh;" />
+            <p style="font-size:12px; font-style:italic;">by: https://medium.theuxblog.com/@Cerosdotcom</p>
           </div>
           <div class="col-lg" data-aos="fade-left"  data-aos-duration="1000">
-            <h1>WAT</h1>
+            <h1>WAT?</h1>
+            <h6 class="text-muted">Wat is een grid systeem?</h6>
             <p style="max-width: 374px; text-align: justify;">
               Een grid systeem is een raster voor het ordenen van de lay-out. De
               lay-outs kan worden afgedrukt (zoals een boek, tijdschrift of
@@ -894,7 +919,7 @@
 
                   <div class="modal-footer">
                     <button
-                      class="btn btn-primary"
+                      class="button"
                       data-dismiss="modal"
                       type="button"
                     >
@@ -939,7 +964,7 @@
                   </div>
                   <div class="modal-footer">
                     <button
-                      class="btn btn-primary"
+                      class="button"
                       data-dismiss="modal"
                       type="button"
                     >
@@ -985,7 +1010,7 @@
                   </div>
                   <div class="modal-footer">
                     <button
-                      class="btn btn-primary"
+                      class="button"
                       data-dismiss="modal"
                       type="button"
                     >
@@ -1030,7 +1055,7 @@
                   </div>
                   <div class="modal-footer">
                     <button
-                      class="btn btn-primary"
+                      class="button"
                       data-dismiss="modal"
                       type="button"
                     >
@@ -1079,7 +1104,7 @@
                   </div>
                   <div class="modal-footer">
                     <button
-                      class="btn btn-primary"
+                      class="button"
                       data-dismiss="modal"
                       type="button"
                     >
@@ -1124,7 +1149,7 @@
                   </div>
                   <div class="modal-footer">
                     <button
-                      class="btn btn-primary"
+                      class="button"
                       data-dismiss="modal"
                       type="button"
                     >
@@ -1172,7 +1197,7 @@
                   </div>
                   <div class="modal-footer">
                     <button
-                      class="btn btn-primary"
+                      class="button"
                       data-dismiss="modal"
                       type="button"
                     >
@@ -1217,7 +1242,7 @@
                   </div>
                   <div class="modal-footer">
                     <button
-                      class="btn btn-primary"
+                      class="button"
                       data-dismiss="modal"
                       type="button"
                     >
@@ -1247,9 +1272,9 @@
           class="row" 
           style="margin-bottom: 5vh; margin-left: 10px; margin-right: 10px;" data-aos="fade-up"  data-aos-duration="1000">
           <div class="col-lg">
-            <h1>WAAROM</h1>
+            <h1>WAAROM?</h1>
+            <h6 class="text-muted">Waarom zou je een grid systeem gebruiken?</h6>
             <p style=" text-align: justify;">
-              Waarom zou je een grid systeem gebruiken?<br>
               Ontwerpers lossen problemen op. UI ontwerpers worden geconfronteerd met het vinden 
               van oplossingen voor visuele problemen en het organiseren van deze oplossingen. 
               En één manier om deze problemen op te lossen is door het gebruik van een Grid System. 
@@ -1311,8 +1336,7 @@
         <img class="img-fluid" src="images/1.jpg" alt=""  style="width:250px; height:150px">
         <div>
           <h4>
-              <a data-toggle="collapse" href="#schetsen" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed";
-              ;>
+              <a data-toggle="collapse" href="#schetsen" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed"; style="color:#ee8572">
                   Schetsen
               </a>
           </h4>
@@ -1331,7 +1355,7 @@
         <img class="img-fluid" src="images/2.jpg" alt="" style="width:250px; height:150px">
         <div>
           <h4>
-              <a data-toggle="collapse" href="#beperkingen" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed">
+              <a data-toggle="collapse" href="#beperkingen" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed" style="color:#ee8572">
                 Beperkingen
               </a>
           </h4>
@@ -1351,7 +1375,7 @@
         <img class="img-fluid" src="images/3.jpg" alt="" style="width:250px; height:150px">
         <div>
           <h4>
-              <a data-toggle="collapse" href="#margin" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed">
+              <a data-toggle="collapse" href="#margin" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed" style="color:#ee8572">
                 Margins
               </a>
           </h4>
@@ -1376,7 +1400,7 @@
         <img class="img-fluid" src="images/4.jpg" alt="" style="width:250px; height:150px">
         <div>
           <h4>
-              <a data-toggle="collapse" href="#baseline" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed">
+              <a data-toggle="collapse" href="#baseline" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed" style="color:#ee8572">
                 Baseline grid
               </a>
           </h4>
@@ -1397,7 +1421,7 @@
         <img class="img-fluid" src="images/5.jpg" alt="" style="width:250px; height:150px">
         <div>
           <h4>
-              <a data-toggle="collapse" href="#kolommen" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed">
+              <a data-toggle="collapse" href="#kolommen" aria-expanded="true" aria-controls="collapse-collapsed" id="heading-collapsed" style="color:#ee8572">
                 Kolommen en gutters
               </a>
           </h4>
@@ -1429,11 +1453,20 @@
         id="five"
         style="display: flex;
     flex-direction: column;
-    justify-content: center;"
+    justify-content: center;
+    margin-bottom: 50px;"
       >
+      <div class="row" data-aos="fade-right"  data-aos-duration="1000">
+        <div class="col-lg-12" style="margin-bottom: 60px; margin-left: 20px;">
+          <h1>WIE?</h1>
+          <h6 class="text-muted">Hieronder beschrijven wij 2 auteurs die schrijven over het grid system. 
+            <br>Wij hebben deze 2 literatuurs gebruikt bij ons onderzoek. <br>
+             Hieronder vertellen we er meer over.</h6>
+        </div>
+      </div>
         <div class="row" style="justify-content: space-around;">
-          <div class="col-lg text-center" style="max-width: 350px;" data-aos="fade-right"  data-aos-duration="1000">
-            <h1 >Grid system legend in graphic design</h1>
+          <div class="col-lg " style="max-width: 550px;" data-aos="fade-right"  data-aos-duration="1000">
+            <h4 >Grid system legend in graphic design</h4>
             <p style="text-align: justify;">
               Een van de bekendste designer die bekend staat om grid systems voor grafisch vormgeven is Josef Müller-Brockmann. 
               Zijn boek: Grid systems in graphic design is zeker een aanrader te lezen. Hierin krijg je een gedetailleerd uitleg over
@@ -1443,10 +1476,15 @@
                     class="img-fluid d-block mx-auto"
                     src="images/boek1.jpg"
                     alt=""
+                    style="height: 307px;
+                    width: 520px;"
                   />
+                  <p style="font-size: 12px; font-style: italic;">
+                    by: http://thinkingform.nyc/2011/03/18/grid-systems-in-graphic-design/
+                  </p>
           </div>
-          <div class="col-lg text-center" style="max-width: 350px;" data-aos="fade-left"  data-aos-duration="1000">
-            <h1 >Grid system legend in UI design</h1>
+          <div class="col-lg" style="max-width: 550px;" data-aos="fade-left"  data-aos-duration="1000">
+            <h4 >Grid system legend in UI design</h4>
             <p style="text-align: justify;">
               Het boek: Ordering Disorder: Grid Principles for Web Design van ontwerper Khoi Vinh is 
               een aanrader als je je wilt verdiepen in het gebruik van grid systems in User Interface Design. 
@@ -1456,9 +1494,14 @@
             </p>
             <img
                     class="img-fluid d-block mx-auto"
-                    src="images/boek2.jpg"
+                    src="images/boek2.png"
                     alt=""
+                    style="height: 307px;
+                    width: 520px;"
                   />
+                  <p style="font-size: 12px; font-style: italic;">
+                    by: https://www.subtraction.com/2010/11/05/i-wrote-a-book/
+                  </p>
           </div>
         </div>
 
@@ -1511,7 +1554,7 @@
                   />
 
                   <button
-                    class="btn btn-primary"
+                    class="button"
                     data-dismiss="modal"
                     type="button"
                   >
@@ -1566,7 +1609,7 @@
                   />
 
                   <button
-                    class="btn btn-primary"
+                    class="button"
                     data-dismiss="modal"
                     type="button"
                   >
@@ -1626,7 +1669,7 @@
                   />
 
                   <button
-                    class="btn btn-primary"
+                    class="button"
                     data-dismiss="modal"
                     type="button"
                   >
@@ -1678,7 +1721,7 @@
                   />
 
                   <button
-                    class="btn btn-primary"
+                    class="button"
                     data-dismiss="modal"
                     type="button"
                   >
